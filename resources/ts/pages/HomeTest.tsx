@@ -2,7 +2,7 @@
 import React from 'react';
 import { css, jsx } from '@emotion/react';
 import CustomFonts from "../components/Fonts";
-import { fontFamily, gibson, fontSize, fontWeight } from '../constants/style';
+import { fontFamily, gibson, fontSize, fontWeight, space } from '../constants/style';
 
 export default function HomeTest(){
     return(
@@ -10,12 +10,22 @@ export default function HomeTest(){
             <CustomFonts />
             <div
                 css={css`
-                    background-color: black;
-                    color:white;
-                    font-family: ${gibson}, ${fontFamily}
+                    text-align: center;
+                    padding: 1em;
                 `}
             >
-                Hello World!
+                <div
+                    css={css`
+                        font-family: ${gibson}, ${fontFamily};
+                        font-weight: ${fontWeight['bold']};
+                        letter-spacing: ${space[1]};
+                        font-size: ${fontSize[8]};
+                        text-transform: uppercase;
+                
+                    `}
+                >
+                    Demo Disc
+                </div>
             </div>
         </div>
     )
